@@ -3,44 +3,69 @@ import { convertNumberedPinyin, pronouncePinyin, getChineseVoices } from '../uti
 import { comparePinyin, type ComparisonResult } from '../utils/comparison';
 import { startSpeechRecognition, isSpeechRecognitionSupported, compareSpeech } from '../utils/speechRecognition';
 import { phrases as localPhrases, categories as localCategories, type Phrase } from '../data/phrases';
+import LeftSidebar from './LeftSidebar';
+import RightSidebar from './RightSidebar';
+import PracticeArea from './PracticeArea';
 
 export default function PinyinConverter() {
   const [currentPhrase, setCurrentPhrase] = useState<Phrase | null>(null);
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState<ComparisonResult | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [stats, setStats] = useState({ correct: 0, total: 0 });
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [speechResult, setSpeechResult] = useState<{ transcript: string; confidence: number; feedback: string } | null>(null);
   const [phrases] = useState<Phrase[]>(localPhrases);
   const [categories] = useState<string[]>(['all', ...localCategories]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [leftSidebarOpen, setLeftSidebarOpen] = useState(true);
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(true);
+  const [dictionarySearch, setDictionarySearch] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Filter phrases theo search và category
+  const filteredPhrases = phrases.filter(phrase => {
+    const matchCategory = selectedCategory === 'all' || phrase.category === selectedCategory;
+    const matchSearch = searchQuery === '' || 
+      phrase.chinese.includes(searchQuery) ||
+      phrase.vietnamese.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      phrase.pinyin.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchCategory && matchSearch;
+  });
+
+  // Filter phrases cho từ điển
+  const dictionaryResults = phrases.filter(phrase => {
+    if (dictionarySearch === '') return false;
+    return phrase.chinese.includes(dictionarySearch) ||
+      phrase.vietnamese.toLowerCase().includes(dictionarySearch.toLowerCase()) ||
+      phrase.pinyin.toLowerCase().includes(dictionarySearch.toLowerCase());
+  });
+
+  const handlePhraseClick = (phrase: Phrase) => {
+    setCurrentPhrase(phrase);
+    setUserInput('');
+    setResult(null);
+    setSpeechResult(null);
+    setTimeout(() => inputRef.current?.focus(), 100);
+  };
+
   const loadRandomPhrase = useCallback(() => {
-    if (phrases.length === 0) return;
+    if (filteredPhrases.length === 0) return;
     
-    const filtered = selectedCategory === 'all' 
-      ? phrases 
-      : phrases.filter(p => p.category === selectedCategory);
-    
-    if (filtered.length > 0) {
-      const random = filtered[Math.floor(Math.random() * filtered.length)];
-      setCurrentPhrase(random);
-      setUserInput('');
-      setResult(null);
-      setSpeechResult(null);
-      setTimeout(() => inputRef.current?.focus(), 100);
-    }
-  }, [selectedCategory, phrases]);
+    const random = filteredPhrases[Math.floor(Math.random() * filteredPhrases.length)];
+    setCurrentPhrase(random);
+    setUserInput('');
+    setResult(null);
+    setSpeechResult(null);
+    setTimeout(() => inputRef.current?.focus(), 100);
+  }, [filteredPhrases]);
 
   // Load giọng đọc có sẵn
   useEffect(() => {
     const loadVoices = () => {
       const voices = getChineseVoices();
       setAvailableVoices(voices);
-      // Tự động chọn giọng nữ đầu tiên
       if (voices.length > 0 && !selectedVoice) {
         const femaleVoice = voices.find(v => 
           v.name.includes('Female') || 
@@ -64,28 +89,26 @@ export default function PinyinConverter() {
     };
   }, [selectedVoice]);
 
-  // Load câu đầu tiên khi mount hoặc đổi category
+  // Load câu đầu tiên
   useEffect(() => {
-    loadRandomPhrase();
-  }, [loadRandomPhrase]);
+    if (!currentPhrase && phrases.length > 0) {
+      setCurrentPhrase(phrases[0]);
+    }
+  }, [currentPhrase, phrases]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     const cursorPos = e.target.selectionStart || 0;
 
-    // Auto convert khi gõ số 1-4
     const lastChar = newValue[cursorPos - 1];
     if (lastChar && /[1-4]/.test(lastChar)) {
       const beforeCursor = newValue.substring(0, cursorPos);
-      // Match từ sau space hoặc đầu string: (^|\s)
-      // Bao gồm cả chữ có dấu để cho phép sửa dấu: [a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]{1,7}
       const match = beforeCursor.match(/(^|\s)([a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]{1,7})([1-4])$/i);
       
       if (match) {
         const [fullMatch, spaceOrStart, syllable, tone] = match;
         const startPos = cursorPos - fullMatch.length;
         
-        // Loại bỏ dấu cũ (nếu có) trước khi convert dấu mới
         const syllableWithoutTone = syllable
           .replace(/[āáǎà]/g, 'a')
           .replace(/[ēéěè]/g, 'e')
@@ -98,14 +121,11 @@ export default function PinyinConverter() {
         
         const before = newValue.substring(0, startPos);
         const after = newValue.substring(cursorPos);
-        
-        // Tự động thêm space sau từ đã convert (trừ khi sau đó đã có space rồi)
         const autoSpace = after[0] !== ' ' ? ' ' : '';
         const newText = before + spaceOrStart + converted + autoSpace + after;
         
         setUserInput(newText);
         
-        // Di chuyển con trỏ đến sau space (nếu có thêm)
         setTimeout(() => {
           if (inputRef.current) {
             const newCursorPos = startPos + spaceOrStart.length + converted.length + autoSpace.length;
@@ -125,12 +145,6 @@ export default function PinyinConverter() {
     
     const comparison = comparePinyin(userInput, currentPhrase.pinyin);
     setResult(comparison);
-    
-    // Cập nhật stats
-    setStats(prev => ({
-      correct: prev.correct + (comparison.isCorrect ? 1 : 0),
-      total: prev.total + 1,
-    }));
   };
 
   const handleNext = () => {
@@ -140,7 +154,6 @@ export default function PinyinConverter() {
   const handlePronounce = async (text: string) => {
     const success = await pronouncePinyin(text, selectedVoice);
     if (!success) {
-      // Nếu thất bại, thử với giọng mặc định
       await pronouncePinyin(text, null);
     }
   };
@@ -160,11 +173,9 @@ export default function PinyinConverter() {
     setSpeechResult(null);
 
     const result = await startSpeechRecognition();
-
     setIsRecording(false);
 
     if (result.success) {
-      // So sánh với đáp án
       const comparison = compareSpeech(result.transcript, currentPhrase.chinese, currentPhrase.pinyin);
       
       setSpeechResult({
@@ -172,12 +183,6 @@ export default function PinyinConverter() {
         confidence: result.confidence,
         feedback: comparison.feedback,
       });
-
-      // Cập nhật stats
-      setStats(prev => ({
-        correct: prev.correct + (comparison.isCorrect ? 1 : 0),
-        total: prev.total + 1,
-      }));
     } else {
       alert(result.error || 'Không thể nhận diện giọng nói');
     }
@@ -193,201 +198,50 @@ export default function PinyinConverter() {
     }
   };
 
-  if (!currentPhrase) return null;
-
   return (
-    <>
-      <div className="learn-container">
-        {/* Header */}
-        <header className="learn-header">
-          <div>
-            <h1>Học Pinyin</h1>
-            <div className="voice-selector">
-              <label>🎙️ Giọng đọc:</label>
-              <select 
-                value={selectedVoice?.name || ''} 
-                onChange={(e) => {
-                  const voice = availableVoices.find(v => v.name === e.target.value);
-                  setSelectedVoice(voice || null);
-                }}
-                className="voice-select"
-              >
-                {availableVoices.length === 0 && (
-                  <option>Đang tải giọng...</option>
-                )}
-                {availableVoices.map(voice => (
-                  <option key={voice.name} value={voice.name}>
-                    {voice.name.length > 35 ? voice.name.substring(0, 35) + '...' : voice.name}
-                  </option>
-                ))}
-              </select>
-              <button onClick={handleTestVoice} className="btn-test-voice" title="Test giọng">
-                🔊
-              </button>
-            </div>
-          </div>
-          <div className="header-right">
-            <div className="stats">
-              <span className="stat-item">
-                ✅ {stats.correct}/{stats.total}
-              </span>
-              <span className="stat-item">
-                📊 {stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%
-              </span>
-            </div>
-          </div>
-        </header>
+    <div className="flex h-screen overflow-hidden bg-[#f8f9fa]">
+      <LeftSidebar
+        isOpen={leftSidebarOpen}
+        onToggle={() => setLeftSidebarOpen(!leftSidebarOpen)}
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        phrases={filteredPhrases}
+        currentPhrase={currentPhrase}
+        onPhraseClick={handlePhraseClick}
+      />
 
-        {/* Category Filter */}
-        <div className="category-filter">
-        <button
-          className={selectedCategory === 'all' ? 'active' : ''}
-          onClick={() => setSelectedCategory('all')}
-        >
-          Tất cả
-        </button>
-        {categories.map(cat => (
-          <button
-            key={cat}
-            className={selectedCategory === cat ? 'active' : ''}
-            onClick={() => setSelectedCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      <PracticeArea
+        currentPhrase={currentPhrase}
+        userInput={userInput}
+        onInputChange={handleInputChange}
+        onKeyPress={handleKeyPress}
+        inputRef={inputRef}
+        result={result}
+        speechResult={speechResult}
+        isRecording={isRecording}
+        availableVoices={availableVoices}
+        selectedVoice={selectedVoice}
+        onVoiceChange={setSelectedVoice}
+        onCheck={handleCheck}
+        onNext={handleNext}
+        onPronounce={handlePronounce}
+        onTestVoice={handleTestVoice}
+        onStartRecording={handleStartRecording}
+        isSpeechSupported={isSpeechRecognitionSupported()}
+      />
 
-      {/* Main Card */}
-      <div className="practice-card">
-        {/* Question */}
-        <div className="question-section">
-          <div className="difficulty-badge">{currentPhrase.difficulty}</div>
-          <div className="vietnamese-text">{currentPhrase.vietnamese}</div>
-          <div className="chinese-text">{currentPhrase.chinese}</div>
-        </div>
-
-        {/* Input */}
-        <div className="input-section">
-          <label>Gõ Pinyin của bạn:</label>
-          <input
-            ref={inputRef}
-            type="text"
-            value={userInput}
-            onChange={handleInputChange}
-            onKeyPress={handleKeyPress}
-            placeholder="Gõ pinyin... (vd: ni3 hao3)"
-            disabled={!!result}
-            className="pinyin-input-field"
-          />
-          <small className="hint">💡 Gõ số 1-4 sau mỗi âm tiết để thêm thanh tự động</small>
-        </div>
-
-        {/* Actions */}
-        <div className="action-buttons">
-          {!result ? (
-            <>
-              <button onClick={handleCheck} className="btn-primary" disabled={!userInput.trim()}>
-                Kiểm tra
-              </button>
-              <button onClick={() => handlePronounce(currentPhrase.chinese)} className="btn-secondary">
-                🔊 Nghe
-              </button>
-              {isSpeechRecognitionSupported() && (
-                <button 
-                  onClick={handleStartRecording} 
-                  className={`btn-record ${isRecording ? 'recording' : ''}`}
-                  disabled={isRecording}
-                >
-                  {isRecording ? '🎙️ Đang nghe...' : '🎤 Nói thử'}
-                </button>
-              )}
-            </>
-          ) : (
-            <button onClick={handleNext} className="btn-primary">
-              Câu tiếp theo →
-            </button>
-          )}
-        </div>
-
-        {/* Result */}
-        {result && (
-          <div className={`result-section ${result.isCorrect ? 'correct' : 'incorrect'}`}>
-            <div className="result-header">
-              <div className="score-circle">{result.similarity}%</div>
-              <div className="feedback">{result.feedback}</div>
-            </div>
-
-            {result.mistakes.length > 0 && (
-              <div className="mistakes">
-                <h4>❌ Sai sót:</h4>
-                <ul>
-                  {result.mistakes.map((mistake, i) => (
-                    <li key={i}>{mistake}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {result.suggestions.length > 0 && (
-              <div className="suggestions">
-                <h4>💡 Gợi ý:</h4>
-                <ul>
-                  {result.suggestions.map((suggestion, i) => (
-                    <li key={i}>{suggestion}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <div className="answer-comparison">
-              <div className="comparison-row">
-                <span className="label">Bạn gõ:</span>
-                <span className="value user">{userInput}</span>
-              </div>
-              <div className="comparison-row">
-                <span className="label">Đáp án:</span>
-                <span className="value correct" onClick={() => handlePronounce(currentPhrase.chinese)}>
-                  {currentPhrase.pinyin}
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Speech Recognition Result */}
-        {speechResult && (
-          <div className="speech-result">
-            <h4>🎤 Kết quả nhận diện giọng nói:</h4>
-            <div className="speech-info">
-              <div className="speech-row">
-                <span className="label">Hệ thống nghe:</span>
-                <span className="value">{speechResult.transcript}</span>
-              </div>
-              <div className="speech-row">
-                <span className="label">Đáp án:</span>
-                <span className="value">{currentPhrase.chinese}</span>
-              </div>
-              <div className="speech-row">
-                <span className="label">Độ tin cậy:</span>
-                <span className="value">{speechResult.confidence}%</span>
-              </div>
-              <div className="speech-feedback">{speechResult.feedback}</div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Tips */}
-      <div className="tips-section">
-        <h3>📖 Hướng dẫn</h3>
-        <ul>
-          <li>Gõ chữ cái + số thanh (1-4) sẽ tự động thành dấu</li>
-          <li>Thanh 1: ā, Thanh 2: á, Thanh 3: ǎ, Thanh 4: à</li>
-          <li>✨ <strong>Tự động thêm space</strong> - Gõ liền thoải mái: ni3hao3 → nǐ hǎo</li>
-          <li>Nhấn Enter để kiểm tra hoặc chuyển câu tiếp</li>
-        </ul>
-      </div>
-      </div>
-    </>
+      <RightSidebar
+        isOpen={rightSidebarOpen}
+        onToggle={() => setRightSidebarOpen(!rightSidebarOpen)}
+        searchQuery={dictionarySearch}
+        onSearchChange={setDictionarySearch}
+        results={dictionaryResults}
+        onPhraseClick={handlePhraseClick}
+        onPronounce={handlePronounce}
+      />
+    </div>
   );
 }
