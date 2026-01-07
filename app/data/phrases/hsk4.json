@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Chúng tôi phát hiện ra một vấn đề nghiêm trọng",
+    "pinyin": "wǒ men fā xiàn le yī gè yán zhòng de wèn tí",
+    "chinese": "我们发现了一个严重的问题",
+    "category": "Công việc",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Công ty này đang phát triển rất nhanh",
+    "pinyin": "zhè gè gōng sī zhèng zài fā zhǎn de hěn kuài",
+    "chinese": "这个公司正在发展得很快",
+    "category": "Kinh doanh",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Chúng ta cần phân tích tình hình hiện tại",
+    "pinyin": "wǒ men xū yào fēn xī xiàn zài de qíng kuàng",
+    "chinese": "我们需要分析现在的情况",
+    "category": "Công việc",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Tôi rất cảm động với câu chuyện này",
+    "pinyin": "wǒ duì zhè gè gù shi hěn gǎn dòng",
+    "chinese": "我对这个故事很感动",
+    "category": "Cảm xúc",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Giáo viên khuyến khích chúng tôi học tập chăm chỉ",
+    "pinyin": "lǎo shī gǔ lì wǒ men nǔ lì xué xí",
+    "chinese": "老师鼓励我们努力学习",
+    "category": "Học tập",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Chúng ta nên quan sát cẩn thận",
+    "pinyin": "wǒ men yīng gāi zǐ xì guān chá",
+    "chinese": "我们应该仔细观察",
+    "category": "Hành động",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Tôi muốn giao tiếp với các chuyên gia",
+    "pinyin": "wǒ xiǎng hé zhuān jiā jiāo liú",
+    "chinese": "我想和专家交流",
+    "category": "Giao tiếp",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Xin vui lòng liên hệ với tôi",
+    "pinyin": "qǐng gēn wǒ lián xì",
+    "chinese": "请跟我联系",
+    "category": "Giao tiếp",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Chúng ta nên tận dụng cơ hội này",
+    "pinyin": "wǒ men yīng gāi lì yòng zhè gè jī huì",
+    "chinese": "我们应该利用这个机会",
+    "category": "Ý kiến",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Tiết kiệm nước là rất quan trọng",
+    "pinyin": "jié yuē yòng shuǐ shì hěn zhòng yào de",
+    "chinese": "节约用水是很重要的",
+    "category": "Môi trường",
+    "hskLevel": "HSK4",
+    "difficulty": "hard"
+  }
+]

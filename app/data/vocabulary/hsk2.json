@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Có thể",
+    "pinyin": "kě yǐ",
+    "chinese": "可以",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Muốn",
+    "pinyin": "xiǎng",
+    "chinese": "想",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Biết",
+    "pinyin": "zhī dào",
+    "chinese": "知道",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Nhìn",
+    "pinyin": "kàn",
+    "chinese": "看",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Đến",
+    "pinyin": "lái",
+    "chinese": "来",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Đi",
+    "pinyin": "qù",
+    "chinese": "去",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Nói",
+    "pinyin": "shuō",
+    "chinese": "说",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Viết",
+    "pinyin": "xiě",
+    "chinese": "写",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Học",
+    "pinyin": "xué xí",
+    "chinese": "学习",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Làm việc",
+    "pinyin": "gōng zuò",
+    "chinese": "工作",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Tắm",
+    "pinyin": "xǐ zǎo",
+    "chinese": "洗澡",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Chơi",
+    "pinyin": "wán",
+    "chinese": "玩",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Chạy",
+    "pinyin": "pǎo bù",
+    "chinese": "跑步",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Ăn",
+    "pinyin": "chī",
+    "chinese": "吃",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Uống",
+    "pinyin": "hē",
+    "chinese": "喝",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Thích",
+    "pinyin": "xǐ huan",
+    "chinese": "喜欢",
+    "category": "Động từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Đẹp",
+    "pinyin": "piào liang",
+    "chinese": "漂亮",
+    "category": "Tính từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Cao",
+    "pinyin": "gāo",
+    "chinese": "高",
+    "category": "Tính từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "Nhanh",
+    "pinyin": "kuài",
+    "chinese": "快",
+    "category": "Tính từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Chậm",
+    "pinyin": "màn",
+    "chinese": "慢",
+    "category": "Tính từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Sáng (thông minh)",
+    "pinyin": "cōng ming",
+    "chinese": "聪明",
+    "category": "Tính từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Quần áo",
+    "pinyin": "yī fu",
+    "chinese": "衣服",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Thời gian",
+    "pinyin": "shí jiān",
+    "chinese": "时间",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Cơm",
+    "pinyin": "mǐ fàn",
+    "chinese": "米饭",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Xe",
+    "pinyin": "chē",
+    "chinese": "车",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 26,
+    "vietnamese": "Máy bay",
+    "pinyin": "fēi jī",
+    "chinese": "飞机",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 27,
+    "vietnamese": "Phòng",
+    "pinyin": "fáng jiān",
+    "chinese": "房间",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 28,
+    "vietnamese": "Bệnh viện",
+    "pinyin": "yī yuàn",
+    "chinese": "医院",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 29,
+    "vietnamese": "Công ty",
+    "pinyin": "gōng sī",
+    "chinese": "公司",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 30,
+    "vietnamese": "Tiền",
+    "pinyin": "qián",
+    "chinese": "钱",
+    "category": "Danh từ",
+    "hskLevel": "HSK2",
+    "partOfSpeech": "Danh từ"
+  }
+]

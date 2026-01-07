@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Các nhà khoa học đã chứng minh lý thuyết này",
+    "pinyin": "kē xué jiā yǐ jīng zhèng míng le zhè gè lǐ lùn",
+    "chinese": "科学家已经证明了这个理论",
+    "category": "Khoa học",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Chúng tôi đã tranh luận về vấn đề này suốt cả ngày",
+    "pinyin": "wǒ men duì zhè gè wèn tí biàn lùn le yī zhěng tiān",
+    "chinese": "我们对这个问题辩论了一整天",
+    "category": "Thảo luận",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Không ai có thể áp đặt ý kiến của mình lên người khác",
+    "pinyin": "méi yǒu rén néng bǎ zì jǐ de yì jiàn qiáng pò gěi bié rén",
+    "chinese": "没有人能把自己的意见强迫给别人",
+    "category": "Triết lý",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Đa số người dân ủng hộ chính sách cải cách này",
+    "pinyin": "dà duō shù rén mín yǒng hù zhè gè gǎi gé zhèng cè",
+    "chinese": "大多数人民拥护这个改革政策",
+    "category": "Chính trị",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Trong đàm phán, đôi khi cần phải thỏa hiệp",
+    "pinyin": "zài tán pàn zhōng, yǒu shí hòu xū yào tuǒ xié",
+    "chinese": "在谈判中，有时候需要妥协",
+    "category": "Kinh doanh",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Quyền lực thống trị đã sụp đổ",
+    "pinyin": "tǒng zhì quán lì yǐ jīng bēng kuì",
+    "chinese": "统治权力已经崩溃",
+    "category": "Lịch sử",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Sự cải cách giáo dục ảnh hưởng đến toàn bộ xã hội",
+    "pinyin": "jiào yù gǎi gé yǐng xiǎng dào zhěng gè shè huì",
+    "chinese": "教育改革影响到整个社会",
+    "category": "Giáo dục",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Hành vi này vi phạm quy định của công ty",
+    "pinyin": "zhè gè xíng wéi wéi fǎn gōng sī de guī dìng",
+    "chinese": "这个行为违反公司的规定",
+    "category": "Pháp luật",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Phê phán mang tính xây dựng giúp chúng ta tiến bộ",
+    "pinyin": "jiàn shè xìng de pī píng bāng zhù wǒ men jìn bù",
+    "chinese": "建设性的批评帮助我们进步",
+    "category": "Phát triển",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Hệ thống này được xây dựng trên cơ sở lý thuyết vững chắc",
+    "pinyin": "zhè gè xì tǒng jiàn lì zài jiān gù de lǐ lùn jī chǔ shàng",
+    "chinese": "这个系统建立在坚固的理论基础上",
+    "category": "Khoa học",
+    "hskLevel": "HSK6",
+    "difficulty": "hard"
+  }
+]

@@ -1,4 +1,4 @@
-import { type Phrase } from '../data/phrases';
+import { type Phrase } from '../data';
 
 interface LeftSidebarProps {
   isOpen: boolean;
@@ -48,10 +48,10 @@ export default function LeftSidebar({
             <div className="relative">
               <input 
                 type="text" 
-                placeholder="🔍 Tìm kiếm mẫu câu..." 
+                placeholder="Tìm kiếm mẫu câu..." 
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full px-4 py-2.5 pl-10 border border-[#e0e2e5] rounded-lg text-sm bg-[#f8f9fa] transition-all duration-200 focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_3px_#e7f3ff]"
+                className="w-full px-4 py-2.5 pl-10 border border-[#e0e2e5] rounded-lg text-sm bg-[#f8f9fa] text-[#1c1e21] placeholder:text-[#8a8d91] transition-all duration-200 focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_3px_#e7f3ff]"
               />
               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#65676b]">🔍</span>
             </div>

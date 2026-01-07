@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Tôi là người Việt Nam",
+    "pinyin": "wǒ shì yuè nán rén",
+    "chinese": "我是越南人",
+    "category": "Giới thiệu",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Bạn tên gì?",
+    "pinyin": "nǐ jiào shén me míng zi",
+    "chinese": "你叫什么名字",
+    "category": "Giới thiệu",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Tôi tên Minh",
+    "pinyin": "wǒ jiào míng",
+    "chinese": "我叫明",
+    "category": "Giới thiệu",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Rất vui được gặp bạn",
+    "pinyin": "hěn gāo xìng rèn shi nǐ",
+    "chinese": "很高兴认识你",
+    "category": "Giới thiệu",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Nhà vệ sinh ở đâu?",
+    "pinyin": "cè suǒ zài nǎ lǐ",
+    "chinese": "厕所在哪里",
+    "category": "Hỏi đường",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Cái này bao nhiêu tiền?",
+    "pinyin": "zhè gè duō shao qián",
+    "chinese": "这个多少钱",
+    "category": "Mua sắm",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Bây giờ là mấy giờ?",
+    "pinyin": "xiàn zài jǐ diǎn",
+    "chinese": "现在几点",
+    "category": "Thời gian",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Hôm nay thứ mấy?",
+    "pinyin": "jīn tiān xīng qī jǐ",
+    "chinese": "今天星期几",
+    "category": "Thời gian",
+    "hskLevel": "HSK2",
+    "difficulty": "medium"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Bạn có thể nói chậm hơn không?",
+    "pinyin": "nǐ néng shuō màn yì diǎn ma",
+    "chinese": "你能说慢一点吗",
+    "category": "Giao tiếp",
+    "hskLevel": "HSK2",
+    "difficulty": "hard"
+  }
+]

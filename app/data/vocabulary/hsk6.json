@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Chứng minh",
+    "pinyin": "zhèng míng",
+    "chinese": "证明",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Tranh luận",
+    "pinyin": "biàn lùn",
+    "chinese": "辩论",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Áp đặt",
+    "pinyin": "qiáng pò",
+    "chinese": "强迫",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Ủng hộ",
+    "pinyin": "yǒng hù",
+    "chinese": "拥护",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Thỏa hiệp",
+    "pinyin": "tuǒ xié",
+    "chinese": "妥协",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Thống trị",
+    "pinyin": "tǒng zhì",
+    "chinese": "统治",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Cải cách",
+    "pinyin": "gǎi gé",
+    "chinese": "改革",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Ảnh hưởng",
+    "pinyin": "yǐng xiǎng",
+    "chinese": "影响",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Vi phạm",
+    "pinyin": "wéi fǎn",
+    "chinese": "违反",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Phê phán",
+    "pinyin": "pī píng",
+    "chinese": "批评",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Vững chắc",
+    "pinyin": "jiān gù",
+    "chinese": "坚固",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Mơ hồ",
+    "pinyin": "mó hu",
+    "chinese": "模糊",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Tinh vi",
+    "pinyin": "jīng zhì",
+    "chinese": "精致",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Thô sơ",
+    "pinyin": "cū cāo",
+    "chinese": "粗糙",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Tất yếu",
+    "pinyin": "bì rán",
+    "chinese": "必然",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Tình cờ",
+    "pinyin": "ǒu rán",
+    "chinese": "偶然",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Hợp pháp",
+    "pinyin": "hé fǎ",
+    "chinese": "合法",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Bất hợp pháp",
+    "pinyin": "fēi fǎ",
+    "chinese": "非法",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "Cao siêu",
+    "pinyin": "chāo yuè",
+    "chinese": "超越",
+    "category": "Động từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Kịch liệt",
+    "pinyin": "jī liè",
+    "chinese": "激烈",
+    "category": "Tính từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Lý thuyết",
+    "pinyin": "lǐ lùn",
+    "chinese": "理论",
+    "category": "Danh từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Giả thuyết",
+    "pinyin": "jiǎ shè",
+    "chinese": "假设",
+    "category": "Danh từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Quan hệ",
+    "pinyin": "guān xì",
+    "chinese": "关系",
+    "category": "Danh từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Chiến lược",
+    "pinyin": "zhàn lüè",
+    "chinese": "战略",
+    "category": "Danh từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Hệ thống",
+    "pinyin": "xì tǒng",
+    "chinese": "系统",
+    "category": "Danh từ",
+    "hskLevel": "HSK6",
+    "partOfSpeech": "Danh từ"
+  }
+]

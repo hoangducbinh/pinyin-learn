@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Tôi nghĩ rằng",
+    "pinyin": "jué de",
+    "chinese": "觉得",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Giải thích",
+    "pinyin": "jiě shì",
+    "chinese": "解释",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Tham gia",
+    "pinyin": "cān jiā",
+    "chinese": "参加",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Bày tỏ",
+    "pinyin": "biǎo shì",
+    "chinese": "表示",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Đồng ý",
+    "pinyin": "tóng yì",
+    "chinese": "同意",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Giúp đỡ",
+    "pinyin": "bāng zhù",
+    "chinese": "帮助",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "So sánh",
+    "pinyin": "bǐ jiào",
+    "chinese": "比较",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Tỏ ra",
+    "pinyin": "biàn chéng",
+    "chinese": "变成",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Tốt nghiệp",
+    "pinyin": "bì yè",
+    "chinese": "毕业",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Đoán",
+    "pinyin": "cāi",
+    "chinese": "猜",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Tự tin",
+    "pinyin": "zì xìn",
+    "chinese": "自信",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Bình thường",
+    "pinyin": "zhèng cháng",
+    "chinese": "正常",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Chủ động",
+    "pinyin": "zhǔ dòng",
+    "chinese": "主动",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Nhẹ nhàng",
+    "pinyin": "qīng",
+    "chinese": "轻",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Yên tĩnh",
+    "pinyin": "ān jìng",
+    "chinese": "安静",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Đơn giản",
+    "pinyin": "jiǎn dān",
+    "chinese": "简单",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Phức tạp",
+    "pinyin": "fù zá",
+    "chinese": "复杂",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Nghiêm túc",
+    "pinyin": "rèn zhēn",
+    "chinese": "认真",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "An toàn",
+    "pinyin": "ān quán",
+    "chinese": "安全",
+    "category": "Tính từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Chú ý",
+    "pinyin": "zhù yì",
+    "chinese": "注意",
+    "category": "Động từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Môi trường",
+    "pinyin": "huán jìng",
+    "chinese": "环境",
+    "category": "Danh từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Cơ hội",
+    "pinyin": "jī huì",
+    "chinese": "机会",
+    "category": "Danh từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Kết quả",
+    "pinyin": "jié guǒ",
+    "chinese": "结果",
+    "category": "Danh từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Điều kiện",
+    "pinyin": "tiáo jiàn",
+    "chinese": "条件",
+    "category": "Danh từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Văn hóa",
+    "pinyin": "wén huà",
+    "chinese": "文化",
+    "category": "Danh từ",
+    "hskLevel": "HSK3",
+    "partOfSpeech": "Danh từ"
+  }
+]

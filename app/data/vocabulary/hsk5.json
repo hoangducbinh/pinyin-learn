@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Bảo vệ",
+    "pinyin": "bǎo hù",
+    "chinese": "保护",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Bảo đảm",
+    "pinyin": "bǎo zhèng",
+    "chinese": "保证",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Biểu hiện",
+    "pinyin": "biǎo xiàn",
+    "chinese": "表现",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Phản ánh",
+    "pinyin": "fǎn yìng",
+    "chinese": "反映",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Công bố",
+    "pinyin": "gōng bù",
+    "chinese": "公布",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Đánh giá",
+    "pinyin": "gū jì",
+    "chinese": "估计",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Khái quát",
+    "pinyin": "gài kuò",
+    "chinese": "概括",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Hợp tác",
+    "pinyin": "hé zuò",
+    "chinese": "合作",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Hoài nghi",
+    "pinyin": "huái yí",
+    "chinese": "怀疑",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Tích lũy",
+    "pinyin": "jī lěi",
+    "chinese": "积累",
+    "category": "Động từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Bình đẳng",
+    "pinyin": "píng děng",
+    "chinese": "平等",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Hợp lý",
+    "pinyin": "hé lǐ",
+    "chinese": "合理",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Nghiêm trọng",
+    "pinyin": "yán zhòng",
+    "chinese": "严重",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Khách quan",
+    "pinyin": "kè guān",
+    "chinese": "客观",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Chủ quan",
+    "pinyin": "zhǔ guān",
+    "chinese": "主观",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Tiêu chuẩn",
+    "pinyin": "biāo zhǔn",
+    "chinese": "标准",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Trừu tượng",
+    "pinyin": "chōu xiàng",
+    "chinese": "抽象",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Cụ thể",
+    "pinyin": "jù tǐ",
+    "chinese": "具体",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "Tương đối",
+    "pinyin": "xiāng duì",
+    "chinese": "相对",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Tuyệt đối",
+    "pinyin": "jué duì",
+    "chinese": "绝对",
+    "category": "Tính từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Hiện tượng",
+    "pinyin": "xiàn xiàng",
+    "chinese": "现象",
+    "category": "Danh từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Nguyên tắc",
+    "pinyin": "yuán zé",
+    "chinese": "原则",
+    "category": "Danh từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Đối tượng",
+    "pinyin": "duì xiàng",
+    "chinese": "对象",
+    "category": "Danh từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Phạm vi",
+    "pinyin": "fàn wéi",
+    "chinese": "范围",
+    "category": "Danh từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Khái niệm",
+    "pinyin": "gài niàn",
+    "chinese": "概念",
+    "category": "Danh từ",
+    "hskLevel": "HSK5",
+    "partOfSpeech": "Danh từ"
+  }
+]

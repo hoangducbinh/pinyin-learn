@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Xin chào",
+    "pinyin": "nǐ hǎo",
+    "chinese": "你好",
+    "category": "Chào hỏi",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Cảm ơn",
+    "pinyin": "xiè xiè",
+    "chinese": "谢谢",
+    "category": "Chào hỏi",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Tạm biệt",
+    "pinyin": "zài jiàn",
+    "chinese": "再见",
+    "category": "Chào hỏi",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Xin lỗi",
+    "pinyin": "duì bù qǐ",
+    "chinese": "对不起",
+    "category": "Chào hỏi",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Không sao",
+    "pinyin": "méi guān xì",
+    "chinese": "没关系",
+    "category": "Chào hỏi",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Tôi không hiểu",
+    "pinyin": "wǒ bù dǒng",
+    "chinese": "我不懂",
+    "category": "Giao tiếp",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Tôi muốn uống nước",
+    "pinyin": "wǒ xiǎng hē shuǐ",
+    "chinese": "我想喝水",
+    "category": "Ăn uống",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Ngon quá!",
+    "pinyin": "hǎo chī",
+    "chinese": "好吃",
+    "category": "Ăn uống",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Tôi yêu bạn",
+    "pinyin": "wǒ ài nǐ",
+    "chinese": "我爱你",
+    "category": "Cảm xúc",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Tôi rất vui",
+    "pinyin": "wǒ hěn kāi xīn",
+    "chinese": "我很开心",
+    "category": "Cảm xúc",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Tôi mệt quá",
+    "pinyin": "wǒ hěn lèi",
+    "chinese": "我很累",
+    "category": "Cảm xúc",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Bây giờ là mấy giờ?",
+    "pinyin": "xiàn zài jǐ diǎn",
+    "chinese": "现在几点",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Hôm nay là thứ mấy?",
+    "pinyin": "jīn tiān xīng qī jǐ",
+    "chinese": "今天星期几",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Tôi muốn đi nhà",
+    "pinyin": "wǒ xiǎng huí jiā",
+    "chinese": "我想回家",
+    "category": "Hành động",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Tôi là học sinh",
+    "pinyin": "wǒ shì xuéshēng",
+    "chinese": "我是学生",
+    "category": "Giới thiệu",
+    "hskLevel": "HSK1",
+    "difficulty": "easy"
+  }
+]

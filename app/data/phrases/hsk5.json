@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Chúng ta phải bảo vệ môi trường sống",
+    "pinyin": "wǒ men bì xū bǎo hù shēng huó huán jìng",
+    "chinese": "我们必须保护生活环境",
+    "category": "Môi trường",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Tôi có thể bảo đảm chất lượng sản phẩm",
+    "pinyin": "wǒ kě yǐ bǎo zhèng chǎn pǐn zhì liàng",
+    "chinese": "我可以保证产品质量",
+    "category": "Kinh doanh",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Biểu hiện của anh ấy rất tích cực",
+    "pinyin": "tā de biǎo xiàn hěn jī jí",
+    "chinese": "他的表现很积极",
+    "category": "Đánh giá",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Số liệu này phản ánh tình hình thực tế",
+    "pinyin": "zhè gè shù jù fǎn yìng shí jì qíng kuàng",
+    "chinese": "这个数据反映实际情况",
+    "category": "Phân tích",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Chính phủ công bố chính sách mới",
+    "pinyin": "zhèng fǔ gōng bù xīn zhèng cè",
+    "chinese": "政府公布新政策",
+    "category": "Chính trị",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Tôi đánh giá rằng dự án này sẽ thành công",
+    "pinyin": "wǒ gū jì zhè gè xiàng mù huì chéng gōng",
+    "chinese": "我估计这个项目会成功",
+    "category": "Dự đoán",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Chúng tôi cần hợp tác với các đối tác quốc tế",
+    "pinyin": "wǒ men xū yào hé guó jì hé zuò huǒ bàn hé zuò",
+    "chinese": "我们需要和国际合作伙伴合作",
+    "category": "Kinh doanh",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Tôi hoài nghi về kết quả này",
+    "pinyin": "wǒ duì zhè gè jié guǒ huái yí",
+    "chinese": "我对这个结果怀疑",
+    "category": "Ý kiến",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Kinh nghiệm được tích lũy qua thời gian",
+    "pinyin": "jīng yàn shì tōng guò shí jiān jī lěi de",
+    "chinese": "经验是通过时间积累的",
+    "category": "Triết lý",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Mọi người đều bình đẳng trước pháp luật",
+    "pinyin": "měi gè rén zài fǎ lǜ miàn qián dōu shì píng děng de",
+    "chinese": "每个人在法律面前都是平等的",
+    "category": "Pháp luật",
+    "hskLevel": "HSK5",
+    "difficulty": "hard"
+  }
+]

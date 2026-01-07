@@ -1,12 +1,12 @@
-import { type Phrase } from '../data/phrases';
+import { type Vocabulary } from '../data';
 
 interface RightSidebarProps {
   isOpen: boolean;
   onToggle: () => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
-  results: Phrase[];
-  onPhraseClick: (phrase: Phrase) => void;
+  results: Vocabulary[];
+  onVocabularyClick: (vocabulary: Vocabulary) => void;
   onPronounce: (text: string) => void;
 }
 
@@ -16,7 +16,7 @@ export default function RightSidebar({
   searchQuery,
   onSearchChange,
   results,
-  onPhraseClick,
+  onVocabularyClick,
   onPronounce,
 }: RightSidebarProps) {
   return (
@@ -42,10 +42,10 @@ export default function RightSidebar({
             <div className="relative">
               <input 
                 type="text" 
-                placeholder="🔎 Tìm từ, pinyin, nghĩa..." 
+                placeholder="Tìm từ, pinyin, nghĩa..." 
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full px-4 py-2.5 pl-10 border border-[#e0e2e5] rounded-lg text-sm bg-[#f8f9fa] transition-all duration-200 focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_3px_#e7f3ff]"
+                className="w-full px-4 py-2.5 pl-10 border border-[#e0e2e5] rounded-lg text-sm bg-[#f8f9fa] text-[#1c1e21] placeholder:text-[#8a8d91] transition-all duration-200 focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_3px_#e7f3ff]"
               />
               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#65676b]">🔎</span>
             </div>
@@ -72,30 +72,30 @@ export default function RightSidebar({
               </div>
             ) : (
               <div className="space-y-3">
-                {results.map((phrase, index) => (
+                {results.map((vocab, index) => (
                   <div 
                     key={index}
                     className="bg-white p-4 rounded-lg border border-[#e0e2e5] hover:border-[#0084ff] hover:shadow-md transition-all duration-200 cursor-pointer"
-                    onClick={() => onPhraseClick(phrase)}
+                    onClick={() => onVocabularyClick(vocab)}
                   >
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <div className="text-2xl font-bold text-[#1c1e21]">{phrase.chinese}</div>
-                      <span className={`text-[10px] px-2 py-1 rounded uppercase font-bold tracking-wide flex-shrink-0 ${
-                        phrase.difficulty.toLowerCase() === 'easy' ? 'bg-[#e8f5e9] text-[#00a400]' :
-                        phrase.difficulty.toLowerCase() === 'medium' ? 'bg-[#fff4e6] text-[#f57c00]' :
-                        'bg-[#ffebee] text-[#e4002b]'
-                      }`}>
-                        {phrase.difficulty}
+                      <div className="text-2xl font-bold text-[#1c1e21]">{vocab.chinese}</div>
+                      <span className="text-[10px] px-2 py-1 rounded uppercase font-bold tracking-wide flex-shrink-0 bg-[#e7f3ff] text-[#0084ff]">
+                        {vocab.hskLevel}
                       </span>
                     </div>
-                    <div className="text-sm text-[#0084ff] font-mono mb-2">{phrase.pinyin}</div>
-                    <div className="text-sm text-[#65676b] leading-relaxed">{phrase.vietnamese}</div>
+                    <div className="text-sm text-[#0084ff] font-mono mb-2">{vocab.pinyin}</div>
+                    <div className="text-sm text-[#65676b] leading-relaxed">{vocab.vietnamese}</div>
                     <div className="mt-3 pt-3 border-t border-[#f0f2f5] flex items-center justify-between">
-                      <span className="text-xs text-[#8a8d91] uppercase tracking-wide">{phrase.category}</span>
+                      <div className="flex gap-2">
+                        <span className="text-xs text-[#8a8d91] uppercase tracking-wide">{vocab.partOfSpeech}</span>
+                        <span className="text-xs text-[#bcc0c4]">•</span>
+                        <span className="text-xs text-[#8a8d91] uppercase tracking-wide">{vocab.category}</span>
+                      </div>
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
-                          onPronounce(phrase.chinese);
+                          onPronounce(vocab.chinese);
                         }}
                         className="text-sm px-3 py-1 bg-[#f0f2f5] rounded hover:bg-[#e7f3ff] hover:text-[#0084ff] transition-all"
                       >

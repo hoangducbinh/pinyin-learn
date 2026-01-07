@@ -1,4 +1,4 @@
-import { type Phrase } from '../data/phrases';
+import { type Phrase } from '../data';
 import { type ComparisonResult } from '../utils/comparison';
 
 interface PracticeAreaProps {
@@ -118,7 +118,7 @@ export default function PracticeArea({
                   onKeyPress={onKeyPress}
                   placeholder="Gõ pinyin... (vd: ni3 hao3 → nǐ hǎo)"
                   disabled={!!result}
-                  className="w-full py-4 px-5 border-2 border-[#e0e2e5] rounded-xl text-2xl font-medium bg-[#f8f9fa] text-[#1c1e21] transition-all duration-200 text-center tracking-wider focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_4px_#e7f3ff] disabled:bg-[#f0f2f5] disabled:cursor-not-allowed disabled:opacity-70"
+                  className="w-full py-4 px-5 border-2 border-[#e0e2e5] rounded-xl text-2xl font-medium bg-[#f8f9fa] text-[#1c1e21] placeholder:text-[#8a8d91] transition-all duration-200 text-center tracking-wider focus:outline-none focus:border-[#0084ff] focus:bg-white focus:shadow-[0_0_0_4px_#e7f3ff] disabled:bg-[#f0f2f5] disabled:cursor-not-allowed disabled:opacity-70"
                 />
                 <div className="mt-3 text-center">
                   <small className="text-sm text-[#65676b]">

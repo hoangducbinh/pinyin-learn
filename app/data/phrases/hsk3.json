@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Tôi nghĩ rằng điều này rất quan trọng",
+    "pinyin": "wǒ jué de zhè hěn zhòng yào",
+    "chinese": "我觉得这很重要",
+    "category": "Ý kiến",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Bạn có thể giải thích cho tôi không?",
+    "pinyin": "nǐ néng gěi wǒ jiě shì ma",
+    "chinese": "你能给我解释吗",
+    "category": "Hỏi đáp",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Tôi muốn tham gia hoạt động này",
+    "pinyin": "wǒ xiǎng cān jiā zhè gè huó dòng",
+    "chinese": "我想参加这个活动",
+    "category": "Hoạt động",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Chúng ta nên chú ý đến vấn đề này",
+    "pinyin": "wǒ men yīng gāi zhù yì zhè gè wèn tí",
+    "chinese": "我们应该注意这个问题",
+    "category": "Ý kiến",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Môi trường ở đây rất yên tĩnh",
+    "pinyin": "zhè lǐ de huán jìng hěn ān jìng",
+    "chinese": "这里的环境很安静",
+    "category": "Mô tả",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Đây là một cơ hội tốt",
+    "pinyin": "zhè shì yī gè hǎo jī huì",
+    "chinese": "这是一个好机会",
+    "category": "Ý kiến",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Kết quả thi của tôi không tốt",
+    "pinyin": "wǒ de kǎo shì jié guǒ bù hǎo",
+    "chinese": "我的考试结果不好",
+    "category": "Học tập",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Tôi đồng ý với ý kiến của bạn",
+    "pinyin": "wǒ tóng yì nǐ de yì jiàn",
+    "chinese": "我同意你的意见",
+    "category": "Ý kiến",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Anh ấy có thể giúp bạn giải quyết vấn đề này",
+    "pinyin": "tā kě yǐ bāng zhù nǐ jiě jué zhè gè wèn tí",
+    "chinese": "他可以帮助你解决这个问题",
+    "category": "Giúp đỡ",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  },
+  {
+    "id": 10,
+    "vietnamese": "So với năm ngoái, tôi đã tiến bộ rất nhiều",
+    "pinyin": "bǐ jiào qù nián, wǒ jìn bù le hěn duō",
+    "chinese": "比较去年，我进步了很多",
+    "category": "Học tập",
+    "hskLevel": "HSK3",
+    "difficulty": "medium"
+  }
+]

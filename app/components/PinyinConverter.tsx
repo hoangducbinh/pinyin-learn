@@ -2,7 +2,8 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { convertNumberedPinyin, pronouncePinyin, getChineseVoices } from '../utils/pinyin';
 import { comparePinyin, type ComparisonResult } from '../utils/comparison';
 import { startSpeechRecognition, isSpeechRecognitionSupported, compareSpeech } from '../utils/speechRecognition';
-import { phrases as localPhrases, categories as localCategories, type Phrase } from '../data/phrases';
+import { phrases as allPhrases, vocabulary as allVocabulary, categories as allCategories, type Phrase, type Vocabulary } from '../data';
+import { searchVietnameseText } from '../utils/search';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import PracticeArea from './PracticeArea';
@@ -16,8 +17,9 @@ export default function PinyinConverter() {
   const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [speechResult, setSpeechResult] = useState<{ transcript: string; confidence: number; feedback: string } | null>(null);
-  const [phrases] = useState<Phrase[]>(localPhrases);
-  const [categories] = useState<string[]>(['all', ...localCategories]);
+  const [phrases] = useState<Phrase[]>(allPhrases);
+  const [vocabulary] = useState<Vocabulary[]>(allVocabulary);
+  const [categories] = useState<string[]>(['all', ...allCategories]);
   const [searchQuery, setSearchQuery] = useState('');
   const [leftSidebarOpen, setLeftSidebarOpen] = useState(true);
   const [rightSidebarOpen, setRightSidebarOpen] = useState(true);
@@ -29,17 +31,17 @@ export default function PinyinConverter() {
     const matchCategory = selectedCategory === 'all' || phrase.category === selectedCategory;
     const matchSearch = searchQuery === '' || 
       phrase.chinese.includes(searchQuery) ||
-      phrase.vietnamese.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      searchVietnameseText(phrase.vietnamese, searchQuery) ||
       phrase.pinyin.toLowerCase().includes(searchQuery.toLowerCase());
     return matchCategory && matchSearch;
   });
 
-  // Filter phrases cho từ điển
-  const dictionaryResults = phrases.filter(phrase => {
+  // Filter vocabulary cho từ điển
+  const dictionaryResults = vocabulary.filter(vocab => {
     if (dictionarySearch === '') return false;
-    return phrase.chinese.includes(dictionarySearch) ||
-      phrase.vietnamese.toLowerCase().includes(dictionarySearch.toLowerCase()) ||
-      phrase.pinyin.toLowerCase().includes(dictionarySearch.toLowerCase());
+    return vocab.chinese.includes(dictionarySearch) ||
+      searchVietnameseText(vocab.vietnamese, dictionarySearch) ||
+      vocab.pinyin.toLowerCase().includes(dictionarySearch.toLowerCase());
   });
 
   const handlePhraseClick = (phrase: Phrase) => {
@@ -239,7 +241,13 @@ export default function PinyinConverter() {
         searchQuery={dictionarySearch}
         onSearchChange={setDictionarySearch}
         results={dictionaryResults}
-        onPhraseClick={handlePhraseClick}
+        onVocabularyClick={(vocab) => {
+          // Tìm phrase chứa từ vựng này để luyện tập
+          const relatedPhrase = phrases.find(p => p.chinese.includes(vocab.chinese));
+          if (relatedPhrase) {
+            handlePhraseClick(relatedPhrase);
+          }
+        }}
         onPronounce={handlePronounce}
       />
     </div>

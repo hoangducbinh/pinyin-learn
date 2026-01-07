@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Tôi",
+    "pinyin": "wǒ",
+    "chinese": "我",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Bạn",
+    "pinyin": "nǐ",
+    "chinese": "你",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Anh ấy",
+    "pinyin": "tā",
+    "chinese": "他",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Chúng tôi",
+    "pinyin": "wǒmen",
+    "chinese": "我们",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Các bạn",
+    "pinyin": "nǐmen",
+    "chinese": "你们",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Họ",
+    "pinyin": "tāmen",
+    "chinese": "他们",
+    "category": "Đại từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Đại từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Là",
+    "pinyin": "shì",
+    "chinese": "是",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Có",
+    "pinyin": "yǒu",
+    "chinese": "有",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Nhìn, xem",
+    "pinyin": "kàn",
+    "chinese": "看",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Nghe",
+    "pinyin": "tīng",
+    "chinese": "听",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Nói",
+    "pinyin": "shuō",
+    "chinese": "说",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Đọc",
+    "pinyin": "dú",
+    "chinese": "读",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Viết",
+    "pinyin": "xiě",
+    "chinese": "写",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Ăn",
+    "pinyin": "chī",
+    "chinese": "吃",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Uống",
+    "pinyin": "hē",
+    "chinese": "喝",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Mua",
+    "pinyin": "mǎi",
+    "chinese": "买",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Yêu, thích",
+    "pinyin": "ài",
+    "chinese": "爱",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Làm",
+    "pinyin": "zuò",
+    "chinese": "做",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "Đi",
+    "pinyin": "qù",
+    "chinese": "去",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Đến",
+    "pinyin": "lái",
+    "chinese": "来",
+    "category": "Động từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Người",
+    "pinyin": "rén",
+    "chinese": "人",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Tên",
+    "pinyin": "míngzi",
+    "chinese": "名字",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Bạn (bè)",
+    "pinyin": "péngyou",
+    "chinese": "朋友",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Giáo viên",
+    "pinyin": "lǎoshī",
+    "chinese": "老师",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Học sinh",
+    "pinyin": "xuéshēng",
+    "chinese": "学生",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 26,
+    "vietnamese": "Nước",
+    "pinyin": "shuǐ",
+    "chinese": "水",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 27,
+    "vietnamese": "Cơm",
+    "pinyin": "mǐfàn",
+    "chinese": "米饭",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 28,
+    "vietnamese": "Sách",
+    "pinyin": "shū",
+    "chinese": "书",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 29,
+    "vietnamese": "Trường học",
+    "pinyin": "xuéxiào",
+    "chinese": "学校",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 30,
+    "vietnamese": "Nhà",
+    "pinyin": "jiā",
+    "chinese": "家",
+    "category": "Danh từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 31,
+    "vietnamese": "Hôm nay",
+    "pinyin": "jīn tiān",
+    "chinese": "今天",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 32,
+    "vietnamese": "Ngày mai",
+    "pinyin": "míng tiān",
+    "chinese": "明天",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 33,
+    "vietnamese": "Hôm qua",
+    "pinyin": "zuó tiān",
+    "chinese": "昨天",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 34,
+    "vietnamese": "Bây giờ",
+    "pinyin": "xiàn zài",
+    "chinese": "现在",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 35,
+    "vietnamese": "Tuần này",
+    "pinyin": "zhè ge xīng qī",
+    "chinese": "这个星期",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 36,
+    "vietnamese": "Năm nay",
+    "pinyin": "jīn nián",
+    "chinese": "今年",
+    "category": "Thời gian",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 37,
+    "vietnamese": "Tốt",
+    "pinyin": "hǎo",
+    "chinese": "好",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 38,
+    "vietnamese": "Lớn",
+    "pinyin": "dà",
+    "chinese": "大",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 39,
+    "vietnamese": "Nhỏ",
+    "pinyin": "xiǎo",
+    "chinese": "小",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 40,
+    "vietnamese": "Nóng",
+    "pinyin": "rè",
+    "chinese": "热",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 41,
+    "vietnamese": "Lạnh",
+    "pinyin": "lěng",
+    "chinese": "冷",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 42,
+    "vietnamese": "Nhiều",
+    "pinyin": "duō",
+    "chinese": "多",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 43,
+    "vietnamese": "Ít",
+    "pinyin": "shǎo",
+    "chinese": "少",
+    "category": "Tính từ",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 44,
+    "vietnamese": "Một",
+    "pinyin": "yī",
+    "chinese": "一",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 45,
+    "vietnamese": "Hai",
+    "pinyin": "èr",
+    "chinese": "二",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 46,
+    "vietnamese": "Ba",
+    "pinyin": "sān",
+    "chinese": "三",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 47,
+    "vietnamese": "Bốn",
+    "pinyin": "sì",
+    "chinese": "四",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 48,
+    "vietnamese": "Năm",
+    "pinyin": "wǔ",
+    "chinese": "五",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 49,
+    "vietnamese": "Sáu",
+    "pinyin": "liù",
+    "chinese": "六",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  },
+  {
+    "id": 50,
+    "vietnamese": "Bảy",
+    "pinyin": "qī",
+    "chinese": "七",
+    "category": "Số đếm",
+    "hskLevel": "HSK1",
+    "partOfSpeech": "Số từ"
+  }
+]

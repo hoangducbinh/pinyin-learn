@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "vietnamese": "Phát hiện",
+    "pinyin": "fā xiàn",
+    "chinese": "发现",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 2,
+    "vietnamese": "Phát triển",
+    "pinyin": "fā zhǎn",
+    "chinese": "发展",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 3,
+    "vietnamese": "Phân tích",
+    "pinyin": "fēn xī",
+    "chinese": "分析",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 4,
+    "vietnamese": "Cảm động",
+    "pinyin": "gǎn dòng",
+    "chinese": "感动",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 5,
+    "vietnamese": "Khuyến khích",
+    "pinyin": "gǔ lì",
+    "chinese": "鼓励",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 6,
+    "vietnamese": "Quan sát",
+    "pinyin": "guān chá",
+    "chinese": "观察",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 7,
+    "vietnamese": "Giao tiếp",
+    "pinyin": "jiāo liú",
+    "chinese": "交流",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 8,
+    "vietnamese": "Liên hệ",
+    "pinyin": "lián xì",
+    "chinese": "联系",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 9,
+    "vietnamese": "Tận dụng",
+    "pinyin": "lì yòng",
+    "chinese": "利用",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 10,
+    "vietnamese": "Tiết kiệm",
+    "pinyin": "jié yuē",
+    "chinese": "节约",
+    "category": "Động từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Động từ"
+  },
+  {
+    "id": 11,
+    "vietnamese": "Phong phú",
+    "pinyin": "fēng fù",
+    "chinese": "丰富",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 12,
+    "vietnamese": "Đáng tin cậy",
+    "pinyin": "kě kào",
+    "chinese": "可靠",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 13,
+    "vietnamese": "Hiện đại",
+    "pinyin": "xiàn dài",
+    "chinese": "现代",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 14,
+    "vietnamese": "Truyền thống",
+    "pinyin": "chuán tǒng",
+    "chinese": "传统",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 15,
+    "vietnamese": "Độc lập",
+    "pinyin": "dú lì",
+    "chinese": "独立",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 16,
+    "vietnamese": "Đặc biệt",
+    "pinyin": "tè bié",
+    "chinese": "特别",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 17,
+    "vietnamese": "Rõ ràng",
+    "pinyin": "míng xiǎn",
+    "chinese": "明显",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 18,
+    "vietnamese": "Tích cực",
+    "pinyin": "jī jí",
+    "chinese": "积极",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 19,
+    "vietnamese": "Tiêu cực",
+    "pinyin": "xiāo jí",
+    "chinese": "消极",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 20,
+    "vietnamese": "Thành thật",
+    "pinyin": "chéng shí",
+    "chinese": "诚实",
+    "category": "Tính từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Tính từ"
+  },
+  {
+    "id": 21,
+    "vietnamese": "Mục tiêu",
+    "pinyin": "mù biāo",
+    "chinese": "目标",
+    "category": "Danh từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 22,
+    "vietnamese": "Phương pháp",
+    "pinyin": "fāng fǎ",
+    "chinese": "方法",
+    "category": "Danh từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 23,
+    "vietnamese": "Kinh nghiệm",
+    "pinyin": "jīng yàn",
+    "chinese": "经验",
+    "category": "Danh từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 24,
+    "vietnamese": "Thái độ",
+    "pinyin": "tài dù",
+    "chinese": "态度",
+    "category": "Danh từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Danh từ"
+  },
+  {
+    "id": 25,
+    "vietnamese": "Quan điểm",
+    "pinyin": "guān diǎn",
+    "chinese": "观点",
+    "category": "Danh từ",
+    "hskLevel": "HSK4",
+    "partOfSpeech": "Danh từ"
+  }
+]
