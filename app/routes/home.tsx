@@ -3,7 +3,7 @@ import PinyinConverter from "../components/PinyinConverter";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Học Pinyin Tiếng Trung" },
+    { title: "Học Pinyin" },
     { name: "description", content: "Chuyển đổi pinyin có số sang pinyin có dấu thanh, học tiếng Trung dễ dàng" },
   ];
 }

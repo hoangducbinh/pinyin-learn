@@ -2,13 +2,9 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { convertNumberedPinyin, pronouncePinyin, getChineseVoices } from '../utils/pinyin';
 import { comparePinyin, type ComparisonResult } from '../utils/comparison';
 import { startSpeechRecognition, isSpeechRecognitionSupported, compareSpeech } from '../utils/speechRecognition';
-import { fetchPhrases, fetchCategories, /* saveUserProgress, getUserStats, */ type Phrase } from '../services/supabase';
-import { phrases as localPhrases } from '../data/phrases';
-// import { useAuth } from '../contexts/AuthContext';
-// import LoginModal from './LoginModal';
+import { phrases as localPhrases, categories as localCategories, type Phrase } from '../data/phrases';
 
 export default function PinyinConverter() {
-  // const { user } = useAuth();
   const [currentPhrase, setCurrentPhrase] = useState<Phrase | null>(null);
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState<ComparisonResult | null>(null);
@@ -18,63 +14,9 @@ export default function PinyinConverter() {
   const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [speechResult, setSpeechResult] = useState<{ transcript: string; confidence: number; feedback: string } | null>(null);
-  const [phrases, setPhrases] = useState<Phrase[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [loadingData, setLoadingData] = useState(true);
-  // const [showLoginModal, setShowLoginModal] = useState(false);
+  const [phrases] = useState<Phrase[]>(localPhrases);
+  const [categories] = useState<string[]>(['all', ...localCategories]);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  // Load data từ Supabase hoặc fallback sang local
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const [phrasesData, categoriesData] = await Promise.all([
-          fetchPhrases(),
-          fetchCategories()
-        ]);
-
-        if (phrasesData.length > 0) {
-          // Dùng data từ Supabase
-          setPhrases(phrasesData);
-          setCategories(['all', ...categoriesData]);
-        } else {
-          // Fallback sang local data
-          console.log('Using local data as fallback');
-          setPhrases(localPhrases);
-          const localCategories = Array.from(new Set(localPhrases.map(p => p.category)));
-          setCategories(['all', ...localCategories]);
-        }
-      } catch (error) {
-        console.error('Error loading data:', error);
-        // Fallback sang local
-        setPhrases(localPhrases);
-        const localCategories = Array.from(new Set(localPhrases.map(p => p.category)));
-        setCategories(['all', ...localCategories]);
-      } finally {
-        setLoadingData(false);
-      }
-    };
-
-    loadData();
-  }, []);
-
-  // TẠM THỜI TẮT LOAD STATS TỪ DATABASE
-  /*
-  // Load stats từ database khi user đăng nhập
-  useEffect(() => {
-    const loadUserStats = async () => {
-      if (user) {
-        const dbStats = await getUserStats(user.id);
-        setStats({ correct: dbStats.correct, total: dbStats.total });
-      } else {
-        // Reset stats khi logout
-        setStats({ correct: 0, total: 0 });
-      }
-    };
-
-    loadUserStats();
-  }, [user]);
-  */
 
   const loadRandomPhrase = useCallback(() => {
     if (phrases.length === 0) return;
@@ -184,19 +126,11 @@ export default function PinyinConverter() {
     const comparison = comparePinyin(userInput, currentPhrase.pinyin);
     setResult(comparison);
     
-    // Cập nhật stats local
+    // Cập nhật stats
     setStats(prev => ({
       correct: prev.correct + (comparison.isCorrect ? 1 : 0),
       total: prev.total + 1,
     }));
-
-    // TẠM THỜI TẮT LƯU VÀO DATABASE
-    /*
-    // Lưu vào database nếu user đã đăng nhập
-    if (user) {
-      saveUserProgress(currentPhrase.id, comparison.isCorrect, userInput);
-    }
-    */
   };
 
   const handleNext = () => {
@@ -244,14 +178,6 @@ export default function PinyinConverter() {
         correct: prev.correct + (comparison.isCorrect ? 1 : 0),
         total: prev.total + 1,
       }));
-
-      // TẠM THỜI TẮT LƯU VÀO DATABASE
-      /*
-      // Lưu vào database nếu user đã đăng nhập
-      if (user && currentPhrase) {
-        saveUserProgress(currentPhrase.id, comparison.isCorrect, result.transcript);
-      }
-      */
     } else {
       alert(result.error || 'Không thể nhận diện giọng nói');
     }
@@ -266,17 +192,6 @@ export default function PinyinConverter() {
       }
     }
   };
-
-  if (loadingData) {
-    return (
-      <div className="learn-container">
-        <div className="loading-state">
-          <div className="loading-spinner"></div>
-          <p>Đang tải dữ liệu...</p>
-        </div>
-      </div>
-    );
-  }
 
   if (!currentPhrase) return null;
 
@@ -320,32 +235,11 @@ export default function PinyinConverter() {
                 📊 {stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0}%
               </span>
             </div>
-            {/* TẠM THỜI TẮT LOGIN/LOGOUT UI */}
-            {/*
-            {user ? (
-              <div className="user-menu">
-                <span className="user-name">
-                  {user.user_metadata?.username || user.email}
-                </span>
-                <button onClick={() => {
-                  if (window.confirm('Bạn có muốn đăng xuất?')) {
-                    import('../services/auth').then(({ signOut }) => signOut());
-                  }
-                }} className="btn-logout">
-                  Đăng xuất
-                </button>
-              </div>
-            ) : (
-              <button onClick={() => setShowLoginModal(true)} className="btn-login">
-                🔐 Đăng nhập
-              </button>
-            )}
-            */}
           </div>
         </header>
 
-      {/* Category Filter */}
-      <div className="category-filter">
+        {/* Category Filter */}
+        <div className="category-filter">
         <button
           className={selectedCategory === 'all' ? 'active' : ''}
           onClick={() => setSelectedCategory('all')}
@@ -491,14 +385,9 @@ export default function PinyinConverter() {
           <li>Thanh 1: ā, Thanh 2: á, Thanh 3: ǎ, Thanh 4: à</li>
           <li>✨ <strong>Tự động thêm space</strong> - Gõ liền thoải mái: ni3hao3 → nǐ hǎo</li>
           <li>Nhấn Enter để kiểm tra hoặc chuyển câu tiếp</li>
-          {/* TẠM THỜI TẮT LOGIN TIP */}
-          {/* {!user && <li>💡 Đăng nhập để lưu lịch sử học tập của bạn!</li>} */}
         </ul>
       </div>
-    </div>
-
-    {/* TẠM THỜI TẮT LOGIN MODAL */}
-    {/* <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} /> */}
+      </div>
     </>
   );
 }
