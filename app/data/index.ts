@@ -33,14 +33,6 @@ import hsk4Vocab from './vocabulary/hsk4.json';
 import hsk5Vocab from './vocabulary/hsk5.json';
 import hsk6Vocab from './vocabulary/hsk6.json';
 
-import hsk30Vocab1 from './vocabulary/hsk30/hsk30_level1.json';
-import hsk30Vocab2 from './vocabulary/hsk30/hsk30_level2.json';
-import hsk30Vocab3 from './vocabulary/hsk30/hsk30_level3.json';
-import hsk30Vocab4 from './vocabulary/hsk30/hsk30_level4.json';
-import hsk30Vocab5 from './vocabulary/hsk30/hsk30_level5.json';
-import hsk30Vocab6 from './vocabulary/hsk30/hsk30_level6.json';
-import hsk30Vocab79 from './vocabulary/hsk30/hsk30_level7-9.json';
-
 // Combine all phrases
 export const phrases: Phrase[] = [
   ...hsk1Phrases as Phrase[],
@@ -59,13 +51,6 @@ export const vocabulary: Vocabulary[] = [
   ...hsk4Vocab as Vocabulary[],
   ...hsk5Vocab as Vocabulary[],
   ...hsk6Vocab as Vocabulary[],
-  ...hsk30Vocab1 as Vocabulary[],
-  ...hsk30Vocab2 as Vocabulary[],
-  ...hsk30Vocab3 as Vocabulary[],
-  ...hsk30Vocab4 as Vocabulary[],
-  ...hsk30Vocab5 as Vocabulary[],
-  ...hsk30Vocab6 as Vocabulary[],
-  ...hsk30Vocab79 as Vocabulary[],
 ];
 
 // Extract unique categories

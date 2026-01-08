@@ -24,12 +24,19 @@ export default function PinyinConverter() {
   const [leftSidebarOpen, setLeftSidebarOpen] = useState(true);
   const [rightSidebarOpen, setRightSidebarOpen] = useState(true);
   const [dictionarySearch, setDictionarySearch] = useState('');
+  const [streak, setStreak] = useState(0);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return false;
+  });
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Filter phrases theo search và category
   const filteredPhrases = phrases.filter(phrase => {
     const matchCategory = selectedCategory === 'all' || phrase.category === selectedCategory;
-    const matchSearch = searchQuery === '' || 
+    const matchSearch = searchQuery === '' ||
       phrase.chinese.includes(searchQuery) ||
       searchVietnameseText(phrase.vietnamese, searchQuery) ||
       phrase.pinyin.toLowerCase().includes(searchQuery.toLowerCase());
@@ -52,9 +59,15 @@ export default function PinyinConverter() {
     setTimeout(() => inputRef.current?.focus(), 100);
   };
 
+  const handleReset = () => {
+    setUserInput('');
+    setResult(null);
+    setSpeechResult(null);
+  };
+
   const loadRandomPhrase = useCallback(() => {
     if (filteredPhrases.length === 0) return;
-    
+
     const random = filteredPhrases[Math.floor(Math.random() * filteredPhrases.length)];
     setCurrentPhrase(random);
     setUserInput('');
@@ -69,8 +82,8 @@ export default function PinyinConverter() {
       const voices = getChineseVoices();
       setAvailableVoices(voices);
       if (voices.length > 0 && !selectedVoice) {
-        const femaleVoice = voices.find(v => 
-          v.name.includes('Female') || 
+        const femaleVoice = voices.find(v =>
+          v.name.includes('Female') ||
           v.name.includes('Ting-Ting') ||
           v.name.includes('Mei-Jia')
         ) || voices[0];
@@ -79,7 +92,7 @@ export default function PinyinConverter() {
     };
 
     loadVoices();
-    
+
     if ('speechSynthesis' in window) {
       window.speechSynthesis.onvoiceschanged = loadVoices;
     }
@@ -106,11 +119,11 @@ export default function PinyinConverter() {
     if (lastChar && /[1-4]/.test(lastChar)) {
       const beforeCursor = newValue.substring(0, cursorPos);
       const match = beforeCursor.match(/(^|\s)([a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]{1,7})([1-4])$/i);
-      
+
       if (match) {
         const [fullMatch, spaceOrStart, syllable, tone] = match;
         const startPos = cursorPos - fullMatch.length;
-        
+
         const syllableWithoutTone = syllable
           .replace(/[āáǎà]/g, 'a')
           .replace(/[ēéěè]/g, 'e')
@@ -118,35 +131,42 @@ export default function PinyinConverter() {
           .replace(/[ōóǒò]/g, 'o')
           .replace(/[ūúǔù]/g, 'u')
           .replace(/[ǖǘǚǜ]/g, 'ü');
-        
+
         const converted = convertNumberedPinyin(syllableWithoutTone + tone);
-        
+
         const before = newValue.substring(0, startPos);
         const after = newValue.substring(cursorPos);
         const autoSpace = after[0] !== ' ' ? ' ' : '';
         const newText = before + spaceOrStart + converted + autoSpace + after;
-        
+
         setUserInput(newText);
-        
+
         setTimeout(() => {
           if (inputRef.current) {
             const newCursorPos = startPos + spaceOrStart.length + converted.length + autoSpace.length;
             inputRef.current.setSelectionRange(newCursorPos, newCursorPos);
           }
         }, 0);
-        
+
         return;
       }
     }
-    
+
     setUserInput(newValue);
   };
 
   const handleCheck = () => {
     if (!currentPhrase || !userInput.trim()) return;
-    
+
     const comparison = comparePinyin(userInput, currentPhrase.pinyin);
     setResult(comparison);
+
+    // Update streak
+    if (comparison.isCorrect) {
+      setStreak(prev => prev + 1);
+    } else {
+      setStreak(0);
+    }
   };
 
   const handleNext = () => {
@@ -179,7 +199,7 @@ export default function PinyinConverter() {
 
     if (result.success) {
       const comparison = compareSpeech(result.transcript, currentPhrase.chinese, currentPhrase.pinyin);
-      
+
       setSpeechResult({
         transcript: result.transcript,
         confidence: result.confidence,
@@ -200,8 +220,20 @@ export default function PinyinConverter() {
     }
   };
 
+  const toggleTheme = () => {
+    setIsDark(prev => {
+      const newDark = !prev;
+      if (newDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      return newDark;
+    });
+  };
+
   return (
-    <div className="flex h-screen overflow-hidden bg-[#f8f9fa]">
+    <div className="flex h-screen overflow-hidden bg-background">
       <LeftSidebar
         isOpen={leftSidebarOpen}
         onToggle={() => setLeftSidebarOpen(!leftSidebarOpen)}
@@ -233,6 +265,14 @@ export default function PinyinConverter() {
         onTestVoice={handleTestVoice}
         onStartRecording={handleStartRecording}
         isSpeechSupported={isSpeechRecognitionSupported()}
+        streak={streak}
+        onReset={handleReset}
+        leftSidebarOpen={leftSidebarOpen}
+        onToggleLeftSidebar={() => setLeftSidebarOpen(!leftSidebarOpen)}
+        rightSidebarOpen={rightSidebarOpen}
+        onToggleRightSidebar={() => setRightSidebarOpen(!rightSidebarOpen)}
+        isDark={isDark}
+        onToggleTheme={toggleTheme}
       />
 
       <RightSidebar
