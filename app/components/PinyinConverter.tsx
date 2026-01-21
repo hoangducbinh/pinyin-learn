@@ -13,6 +13,7 @@ export default function PinyinConverter() {
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState<ComparisonResult | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoice, setSelectedVoice] = useState<SpeechSynthesisVoice | null>(null);
   const [isRecording, setIsRecording] = useState(false);
@@ -240,6 +241,8 @@ export default function PinyinConverter() {
         categories={categories}
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
+        selectedDifficulty={selectedDifficulty}
+        onDifficultyChange={setSelectedDifficulty}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         phrases={filteredPhrases}

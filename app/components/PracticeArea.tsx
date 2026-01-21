@@ -1,6 +1,6 @@
 import { type Phrase } from '../data';
 import { type ComparisonResult } from '../utils/comparison';
-import { Sparkles, Volume2, Check, RotateCcw, Mic, ChevronRight, ChevronLeft, Lightbulb, X, Moon, Sun } from 'lucide-react';
+import { Sparkles, Volume2, Check, RotateCcw, Mic, ChevronRight, ChevronLeft, Lightbulb, X, Moon, Sun, Languages, ChevronDown } from 'lucide-react';
 
 interface PracticeAreaProps {
   currentPhrase: Phrase | null;
@@ -76,7 +76,7 @@ export default function PracticeArea({
               <ChevronRight className="w-4 h-4" />
             </button>
           )}
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg shadow-primary/20">
+          <div className="w-12 h-12 rounded-2xl bg-linear-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg shadow-primary/20">
             <Sparkles className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
@@ -85,41 +85,47 @@ export default function PracticeArea({
           </div>
         </div>
         <div className="flex items-center gap-4">
-          {streak > 0 && (
+          {/* {streak > 0 && (
             <div className="flex items-center gap-2 px-4 py-2 bg-success/10 rounded-xl">
               <span className="text-success text-sm font-medium">Streak: {streak}</span>
             </div>
-          )}
+          )} */}
           {currentPhrase && (
             <span className={`px-4 py-2 rounded-xl text-sm font-medium border ${levelConfig[currentPhrase.difficulty].color}`}>
               {levelConfig[currentPhrase.difficulty].label}
             </span>
           )}
-          <div className="flex items-center gap-2 bg-secondary/50 px-3 py-2 rounded-lg border border-border">
-            <label className="text-xs font-medium text-muted-foreground"></label>
-            <select
-              value={selectedVoice?.name || ''}
-              onChange={(e) => {
-                const voice = availableVoices.find(v => v.name === e.target.value);
-                onVoiceChange(voice || null);
-              }}
-              className="py-1.5 px-2.5 border border-border rounded text-xs bg-background text-foreground cursor-pointer transition-all duration-200 hover:border-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30"
-            >
-              {availableVoices.length === 0 && (
-                <option>Đang tải...</option>
-              )}
-              {availableVoices.map(voice => (
-                <option key={voice.name} value={voice.name}>
-                  {voice.name.length > 30 ? voice.name.substring(0, 30) + '...' : voice.name}
-                </option>
-              ))}
-            </select>
+          <div className="group relative flex items-center gap-1.5 bg-secondary/30 hover:bg-secondary/50 border border-border/50 hover:border-primary/30 py-1 pl-3 pr-1 rounded-full transition-all duration-300">
+            <Languages className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+            <div className="relative">
+              <select
+                value={selectedVoice?.name || ''}
+                onChange={(e) => {
+                  const voice = availableVoices.find(v => v.name === e.target.value);
+                  onVoiceChange(voice || null);
+                }}
+                className="w-[140px] appearance-none bg-transparent py-1 pl-1 pr-6 text-xs font-medium text-foreground focus:outline-none cursor-pointer truncate"
+              >
+                {availableVoices.length === 0 && (
+                  <option>Đang tải...</option>
+                )}
+                {availableVoices.map(voice => (
+                  <option key={voice.name} value={voice.name}>
+                    {voice.name.length > 30 ? voice.name.substring(0, 30) + '...' : voice.name}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                <ChevronDown className="w-3 h-3 text-muted-foreground/70" />
+              </div>
+            </div>
+            <div className="w-px h-4 bg-border/50 mx-0.5" />
             <button
               onClick={onTestVoice}
-              className="w-8 h-8 border border-border bg-background rounded cursor-pointer text-base transition-all duration-200 hover:bg-secondary hover:border-primary"
+              className="w-7 h-7 flex items-center justify-center rounded-full bg-background/50 hover:bg-primary hover:text-primary-foreground text-muted-foreground transition-all shadow-sm active:scale-95"
               title="Test giọng"
             >
-              <Volume2 className="w-4 h-4" />
+              <Volume2 className="w-3.5 h-3.5" />
             </button>
           </div>
           <div className="flex items-center gap-3">
@@ -320,7 +326,7 @@ export default function PracticeArea({
                       <div className="flex items-center gap-2">
                         <div className="flex-1 h-3 bg-secondary rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-primary to-success transition-all duration-300"
+                            className="h-full bg-linear-to-r from-primary to-success transition-all duration-300"
                             style={{ width: `${speechResult.confidence}%` }}
                           />
                         </div>

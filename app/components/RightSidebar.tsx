@@ -71,7 +71,7 @@ export default function RightSidebar({
                 Kết quả ({results.length})
               </p>
               {results.slice(0, 3).map((vocab, index) => (
-                <div key={index} className="p-5 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl border border-accent/10 mb-3 last:mb-0">
+                <div key={index} className="p-5 bg-linear-to-br from-accent/5 to-accent/10 rounded-2xl border border-accent/10 mb-3 last:mb-0">
                   <div className="flex items-start justify-between mb-3">
                     <span className="text-4xl font-bold text-foreground">{vocab.chinese}</span>
                     <button
